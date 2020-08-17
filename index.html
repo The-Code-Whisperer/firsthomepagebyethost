@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- My own CSS -->
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Welcome</title>
+    </head>
+    <body id="index_body">
+        <header id="index_header">
+            Welcome to the site! Sorry it is so ugly, it is still developing and it will be super modern and beautiful later! :P
+            <br>
+            For now it has tools, games, and more!
+        </header>
+        <p class="hidden">
+            You found hidden text 1! Try someone else's game at Harvard: <a class="hidden" href="https://scratch.mit.edu/projects/329003271/">Harvard vs Yale GAME</a>
+            <br>
+            <br>
+        </p>
+
+        <p id='second-paragraph'>
+            There's some <span class="redbackground">secret</span> text on this page,
+            but it's up to you to find it! <br><br> If you give up, you can click <button id="reveal_button" onclick="reveal()">reveal</button>
+
+        </p>
+        <script>
+            function reveal() {
+                var change = document.getElementById("reveal_button");
+                if (change.innerHTML == "reveal")
+                {
+                    change.innerHTML = "Are you sure? Try dragging the mouse around.";
+                }
+                else if (change.innerHTML == "Are you sure? Try dragging the mouse around.")
+                {
+                    change.innerHTML = "ARE YOU SURE?";
+                }
+                else
+                {
+                    change.innerHTML = "You may be a slave to instant gratification. Symptoms include being glued to your phone all day. Jk u good.";
+                    document.body.style.backgroundColor = "#000000";
+                    var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');
+                    audio.play();
+                }
+            }
+
+        </script>
+        <br>
+        <br>
+        <div class="container">
+          Here are some links.
+          <div class="row redbackground">
+
+            <div class="col-sm purplebackground">
+                <p><a href="contact.html">Contact me</a></p>        </div>
+            <div class="col-sm purplebackground">
+                <p><a href="toronto.html">The 6ix</a></p>
+            </div>
+            <div class="col-sm purplebackground">
+                <p><a href="hexcolor_test.html">Try the hexcolor tester!</a></p>
+            </div>
+          </div>
+        </div>
+        <p class="hidden big-font">
+            You found hidden text 2! Here's a GAME by Hansome Kim!<br><br> <a class="hidden"
+            href="https://scratch.mit.edu/projects/329000486/">Can you defeat the MEGA SQUIRREL? CLICK to find out!</a>
+        </p>
+
+        <div class="container">
+            Chat (Doesn't work yet)
+            <br>
+            <textarea id="chat" rows="10" cols="51"></textarea>
+            <br>
+            <input type="text" size="40" id="submit_box" name="submitbox" value="What you put in here">
+            <button onclick="chat()">Send</button>
+            <script>
+                function chat() {
+                    var dt = new Date();
+                    var text = document.getElementById("submit_box").value;
+                    document.getElementById("chat").innerHTML += dt.toLocaleTimeString() + ": " + text + "\n";
+                    var textarea = document.getElementById('chat');
+                    textarea.scrollTop = textarea.scrollHeight;
+                    document.getElementById("submit_box").value = "";
+                }
+            </script>
+        </div>
+    <br><br>
+    <p>Date: <span id="datetime"></span></p>
+
+    <script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+    </script>
+        <p id="copyright">
+            Copyright 2019 &copy; Hansome Kim
+        </p>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

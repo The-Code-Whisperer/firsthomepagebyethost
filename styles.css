@@ -1,0 +1,119 @@
+/* uses at least five (5) different CSS selectors (e.g. tag (example), class (.example),
+or ID (#example)), and within which you use a total of at least five (5) different CSS properties,
+such as font-size, or margin */
+
+
+#copyright
+{
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+}
+#index_body
+{
+     background-color: #00AA00
+}
+#index_header
+{
+    font-size: large; text-align: center; background-color: turquoise
+}
+#contact_header
+{
+    text-align: center; font-family: sans-serif, 'Times New Roman'; font-size: 40px
+}
+p
+{
+    padding-left: 10px;
+    font-family: sans-serif;
+}
+body {
+    background-color: #add8e6;
+}
+.hidden {
+    color: #00AA00;
+}
+.bigfont
+{
+    font-size: large;
+}
+
+.alignleft {
+  float: left;
+  width:33%;
+  text-align:left;
+}
+.aligncenter {
+  float: left;
+  width:33%;
+  text-align:center;
+}
+.alignright {
+ float: left;
+ width:33%;
+ text-align:right;
+}
+.red{
+    color: red;
+}
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 992px) {
+
+}
+
+
+@media (min-width: 1200px) {
+
+}
+.parent {
+  display: flex;
+  width: 300px;
+  height: 200px; /* Or whatever */
+}
+
+.child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;  /* Magic! */
+}
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+.purplebackground {
+    background-color: purple;
+}
+.coralborder {
+    border-style: solid;
+    border-color: coral;
+}
+.redbackground {
+    background-color: red;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <title>Hexcolor Tester</title>
+    <body>
+
+        Hexcolor: <input type="text" id="colorText">
+
+        <p id="hextext">Click the button to change the color of this entire webpage!</p>
+
+        <button onclick="isInputValid()">Check color</button>
+
+        <script>
+        function isInputValid() {
+            var input = document.getElementById("colorText").value;
+            if (/^#[0-9A-F]{6}$/i.test(input))
+            {
+                changeBackgroundColor()
+            }
+            else
+            {
+                document.getElementById("hextext").innerHTML="Hexcolors are in the format #FFFFFF (which is white). "
+                + "example: #EF1222. Hexcolors start with a '#' followed by 6 characters from 0 to 9, or A to F. <br><br>"
+                + "The first two characters represent the amount of red, the next two represent the amount of green, "
+                + "and the last is the amount of blue. That's where \"RGB\" comes from!";
+            }
+        }
+
+        function changeBackgroundColor() {
+            var input = document.getElementById("colorText").value;
+            document.body.style.backgroundColor = input;
+        }
+        </script>
+            <p>
+                <a href="index.html">Go to Main Page</a>
+            </p>
+
+    </body>
+
+</html>
